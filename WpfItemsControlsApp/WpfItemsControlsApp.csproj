@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EXCEL.png" />
+    <None Remove="JPG.png" />
+    <None Remove="PDF.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="EXCEL.png" />
+    <Resource Include="JPG.png" />
+    <Resource Include="PDF.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,59 @@
+﻿<Window x:Class="WpfItemsControlsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfItemsControlsApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel Width="200" >
+        <TextBox Name="tb" Width="140" Height="30"></TextBox>
+        <TextBox Name="tbAge" Width="140" Height="30"></TextBox>
+        <Button Click="Button_Click_1">Add employee</Button>
+        <Button Click="Button_Click_2">Show selected</Button>
+        
+        <ListBox Name="lb" 
+                 Width="200" 
+                 Height="100" 
+                 SelectionChanged="lb_SelectionChanged" 
+                 SelectionMode="Extended"
+                 MouseDoubleClick="lb_MouseDoubleClick"
+                 
+                 SelectedValuePath="Age">
+            <local:Employee Name="Tim" Age="44"/>
+            <local:Employee Name="Leo" Age="22"/>
+            <ListBoxItem>Item 1</ListBoxItem>
+            <ListBoxItem>Item 2</ListBoxItem>
+            <ListBoxItem>Item 3</ListBoxItem>
+            <ListBoxItem>Item 4</ListBoxItem>
+            <ListBoxItem>Item 5</ListBoxItem>
+            <ListBoxItem>Item 6</ListBoxItem>
+            <ListBoxItem>Item 7</ListBoxItem>
+            <ListBoxItem>Item 8</ListBoxItem>
+            <ListBoxItem>Item 9</ListBoxItem>
+            <ListBoxItem>Item 10</ListBoxItem>
+            <TextBlock>Hello</TextBlock>
+        </ListBox>
+        <!--Button Click="Button_Click">Add employee in List</Button-->
+        <TextBlock x:Name="txtSelected" 
+                   FontSize="20"
+                   Margin="0, 20"/>
+
+        <ListBox>
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Image Source="/EXCEL.png" Width="30"/>
+                    <TextBlock FontSize="30">Excel</TextBlock>
+                </StackPanel>
+            </ListBoxItem>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/JPG.png" Width="30"/>
+                <TextBlock FontSize="30">Jpeg</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Image Source="/PDF.png" Width="30"/>
+                <TextBlock FontSize="30">Adobe pdf</TextBlock>
+            </StackPanel>
+        </ListBox>
+    </StackPanel>
+</Window>
